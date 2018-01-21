@@ -42,7 +42,7 @@ execute () {
 
 
 (
-echo "^bg(#000000)^fg(#556c85)  ^i(/home/sunn/.dzen/arch_10x10.xbm) START   "   
+echo "^bg(#000000)^fg(#556c85)  ^i(/home/matt/.dzen/arch_10x10.xbm) START   "   
 sed -e 's/:.*$//' \
     -e 's/^.--*/^r('${SEPARATOR_WIDTH}'x1)/' "$MENUFILE" 
 ) | \

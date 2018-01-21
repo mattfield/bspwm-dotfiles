@@ -22,5 +22,5 @@ elif [[ $PERC -lt 101 ]]; then
 	ICON="wireless5.xbm"
 fi
 
-ICON='^i(/home/sunn/.xmonad/dzen2/'"$ICON)"
+ICON='^i(/home/matt/.xmonad/dzen2/'"$ICON)"
 echo "$color$ICON"

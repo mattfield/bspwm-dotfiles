@@ -8,5 +8,5 @@ fi
 if [ $(pgrep conky | wc -w) -gt 0 ]; then
 	echo "Already started"
 else
-	conky -c /home/sunn/.fvwm/conkyrc &
+	conky -c /home/matt/.fvwm/conkyrc &
 fi

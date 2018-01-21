@@ -2,10 +2,10 @@
 
 # Example sxhkd binding:
 #   alt + {a,f}
-#       /home/sunn/scripts/window_move.sh {-p,-n} -x -s 20
+#       /home/matt/scripts/window_move.sh {-p,-n} -x -s 20
 #   
 #   alt + {s,d}
-#       /home/sunn/scripts/window_move.sh {-p,-n} -y -s 20
+#       /home/matt/scripts/window_move.sh {-p,-n} -y -s 20
 
 
 POSITIVE=false

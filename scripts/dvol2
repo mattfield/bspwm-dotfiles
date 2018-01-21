@@ -2,7 +2,7 @@
 #
 # dvolbar - OSD Volume utility 
 #
-source /home/sunn/.xmonad/scripts/config.sh
+source /home/matt/.xmonad/scripts/config.sh
 
 #Customize this stuff
 IF="Master"         # audio channel: Master|PCM

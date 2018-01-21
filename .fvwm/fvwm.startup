@@ -6,7 +6,7 @@
 DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmPager * *
-+ I Exec exec /home/sunn/.fvwm/status
++ I Exec exec /home/matt/.fvwm/status
 #+ I Exec exec nitrogen --restore &
 
 DestroyFunc InitFunction

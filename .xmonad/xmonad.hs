@@ -108,12 +108,12 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 		, ppSep			= "    "
 		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor color2 background .
 				(\x -> case x of
-					"Full"				->	"^i(/home/sunn/.xmonad/dzen2/layout_full.xbm)"
-					"Spacing 5 ResizableTall"	->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
-					"ResizableTall"			->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
-					"SimplestFloat"			->	"^i(/home/sunn/.xmonad/dzen2/mouse_01.xbm)"
-					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
-					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
+					"Full"				->	"^i(/home/matt/.xmonad/dzen2/layout_full.xbm)"
+					"Spacing 5 ResizableTall"	->	"^i(/home/matt/.xmonad/dzen2/layout_tall.xbm)"
+					"ResizableTall"			->	"^i(/home/matt/.xmonad/dzen2/layout_tall.xbm)"
+					"SimplestFloat"			->	"^i(/home/matt/.xmonad/dzen2/mouse_01.xbm)"
+					"Circle"			->	"^i(/home/matt/.xmonad/dzen2/full.xbm)"
+					_				->	"^i(/home/matt/.xmonad/dzen2/grid.xbm)"
 				) 
 --		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)^fg(#D23D3D)^fn(fkp)x ^fn()" "^ca()" . dzenColor foreground background . shorten 40 . pad
 		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)" "^ca()" . dzenColor color15 background . shorten 40 . pad
@@ -126,16 +126,16 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 -- Spawn pipes and menus on boot, set default settings
 --------------------------------------------------------------------------------------------------------------------
 myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '500' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "/home/sunn/.xmonad/status_bar '"++foreground++"' '"++background++"' "++myFont
---myConky = "conky -c /home/sunn/conkyrc"
---myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
+myStatusBar = "/home/matt/.xmonad/status_bar '"++foreground++"' '"++background++"' "++myFont
+--myConky = "conky -c /home/matt/conkyrc"
+--myStartMenu = "/home/matt/.xmonad/start /home/matt/.xmonad/start_apps"
 
 
 main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
---	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
---	xmproc 		<- spawnPipe "tint2 -c /home/sunn/.config/tint2/xmonad.tint2rc"
+--	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/matt/.gtkdocky /usr/bin/docky"
+--	xmproc 		<- spawnPipe "tint2 -c /home/matt/.config/tint2/xmonad.tint2rc"
 --	conky 		<- spawn myConky
 --	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
@@ -168,8 +168,8 @@ main = do
 		,((mod4Mask  			, xK_n), spawn "urxvtc -title ncmpcpp -name ncmpcpp -e ncmpcpp")
 		,((mod4Mask  			, xK_a), spawn "urxvtc -title alsamixer -name alsamixer -e alsamixer")
 		,((mod4Mask  			, xK_M), spawn "urxvtc -title centerim -name centerim -e centerim")
-		,((mod1Mask 			, xK_r), spawn "/home/sunn/scripts/lens")
-		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/sunn/scripts/dmenu/spotlight")
+		,((mod1Mask 			, xK_r), spawn "/home/matt/scripts/lens")
+		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/matt/scripts/dmenu/spotlight")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_i), spawn "xcalib -invert -alter")
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
@@ -200,10 +200,10 @@ main = do
 		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
 		,((0 	 			, xK_Print), spawn "scrot & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
 		,((mod1Mask 	 		, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
-		,((0                     	, xF86XK_AudioLowerVolume), spawn "/home/sunn/scripts/dvol2 -d 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioRaiseVolume), spawn "/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioMute), spawn "/home/sunn/scripts/dvol2 -t")
-		,((0                     	, xF86XK_Display), spawn "/home/sunn/scripts/project")
+		,((0                     	, xF86XK_AudioLowerVolume), spawn "/home/matt/scripts/dvol2 -d 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+		,((0                     	, xF86XK_AudioRaiseVolume), spawn "/home/matt/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+		,((0                     	, xF86XK_AudioMute), spawn "/home/matt/scripts/dvol2 -t")
+		,((0                     	, xF86XK_Display), spawn "/home/matt/scripts/project")
 		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
 		,((0                     	, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
 		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")

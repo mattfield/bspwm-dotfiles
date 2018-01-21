@@ -79,7 +79,7 @@ song_columns_list_format = "(7f)[black]{l} (25)[magenta]{a} (40)[default]{t|f} (
 
 ##### various settings #####
 #
-#execute_on_song_change = "/home/sunn/.xmonad/scripts/dzen_music.sh &> /dev/null &disown"
+#execute_on_song_change = "/home/matt/.xmonad/scripts/dzen_music.sh &> /dev/null &disown"
 #playlist_show_remaining_time = "no"
 #playlist_shorten_total_times = "no"
 #playlist_separate_albums = "no"

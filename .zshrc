@@ -95,8 +95,8 @@ alias svim='sudoedit'
 alias pacman='sudo pacman'
 
 # Network alias
-alias somessh='ssh -i /home/sunn/.ssh/someecards'
-alias somescp='scp -i /home/sunn/.ssh/someecards'
+alias somessh='ssh -i /home/matt/.ssh/someecards'
+alias somescp='scp -i /home/matt/.ssh/someecards'
 function sshsec () { ssh -i ~/.ssh/opsworks.pem ubuntu@"$@" }
 function scpsec () { scp -i ~/.ssh/opsworks.pem ubuntu@"$@" }
 
@@ -110,7 +110,7 @@ alias bool='espresso -o eqntott'
 alias alsamixer="alsamixer -g"
 alias equalizer="alsamixer -D equal"
 alias mysql="mysql -u root -p"
-alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm; /home/sunn/scripts/dwm-status;'
+alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm; /home/matt/scripts/dwm-status;'
 
 # Shortcuts
 #alias rm='rm -i'
@@ -172,10 +172,10 @@ for dir in $pathdirs; do
 done
 
 export EDITOR="vim"
-export XDG_CONFIG_HOME="/home/sunn/.config"
+export XDG_CONFIG_HOME="/home/matt/.config"
 export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dawt.useSystemAAFontSettings=true' 
 export JAVA_FONTS=/usr/share/fonts/TTF
 
 #if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
-#	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
+#	xseticon -id $WINDOWID /home/matt/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
 #fi

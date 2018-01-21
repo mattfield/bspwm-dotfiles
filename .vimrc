@@ -96,7 +96,7 @@
 				\	"continuous_mode": 1,
 				\	"debug_window_level": 2,
 				\	"debug_file_level": 2,
-				\	"debug_file":"/home/sunn/vdebug.log"
+				\	"debug_file":"/home/matt/vdebug.log"
 				\}
 
 " AIRLINE 
